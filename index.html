@@ -1,1 +1,1077 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gêneros Textuais e Gramática — Material de Estudo | Professora Samanta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#ECE0C0;
+    --paper-2:#E1D1A2;
+    --panel:#F5EDD4;
+    --ink:#241A0F;
+    --ink-soft:#5B4526;
+    --red:#9E2B1C;
+    --red-soft:#C24A34;
+    --pine:#2E5C4A;
+    --mustard:#B9811E;
+    --line:#C6AF77;
+    --ok-bg:#DEEAE1;
+    --bad-bg:#F1DDD3;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#1B140C;
+      --paper-2:#251B10;
+      --panel:#221A10;
+      --ink:#F1E4C4;
+      --ink-soft:#C8AF83;
+      --red:#E1614A;
+      --red-soft:#E88468;
+      --pine:#6FBF9A;
+      --mustard:#E3A83B;
+      --line:#4A3B22;
+      --ok-bg:#203028;
+      --bad-bg:#331F1A;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#1B140C;
+    --paper-2:#251B10;
+    --panel:#221A10;
+    --ink:#F1E4C4;
+    --ink-soft:#C8AF83;
+    --red:#E1614A;
+    --red-soft:#E88468;
+    --pine:#6FBF9A;
+    --mustard:#E3A83B;
+    --line:#4A3B22;
+    --ok-bg:#203028;
+    --bad-bg:#331F1A;
+  }
+  html{scroll-padding-top:env(safe-area-inset-top,0px); scroll-behavior:smooth;}
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Lora', Georgia, 'Times New Roman', serif;
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:'Fraunces', Georgia, serif;
+    font-weight:700;
+    color:var(--ink);
+    line-height:1.15;
+    margin:0 0 .5em 0;
+  }
+  a{color:var(--red);}
+  .wrap{max-width:840px; margin:0 auto; padding:0 20px 80px;}
+  .rule{
+    height:3px;
+    background:repeating-linear-gradient(90deg, var(--red) 0 14px, transparent 14px 20px);
+    margin:38px 0;
+    opacity:.8;
+  }
+  /* ---------- HEADER ---------- */
+  header.top{
+    background:
+      radial-gradient(circle at 15% 20%, rgba(158,43,28,.08), transparent 45%),
+      radial-gradient(circle at 85% 0%, rgba(185,129,30,.10), transparent 40%),
+      var(--paper-2);
+    border-bottom:6px double var(--line);
+    padding:26px 20px 34px;
+  }
+  .brandrow{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    max-width:840px;
+    margin:0 auto 22px;
+    flex-wrap:wrap;
+  }
+  .seal{flex:0 0 auto; width:64px; height:64px;}
+  .brand-text{display:flex; flex-direction:column;}
+  .brand-text strong{
+    font-family:'Fraunces', serif;
+    font-size:1.08rem;
+    letter-spacing:.2px;
+  }
+  .brand-text span{
+    color:var(--ink-soft);
+    font-size:.86rem;
+  }
+  .breadcrumb{
+    max-width:840px; margin:0 auto;
+    font-size:.86rem;
+    color:var(--ink-soft);
+  }
+  .breadcrumb b{color:var(--ink);}
+  h1.title{
+    max-width:840px; margin:14px auto 10px;
+    font-size:clamp(1.7rem, 4.4vw, 2.5rem);
+  }
+  h1.title em{font-style:italic; color:var(--red);}
+  .lede{
+    max-width:840px; margin:0 auto 18px;
+    color:var(--ink-soft);
+    font-size:1.02rem;
+  }
+  .quote{
+    max-width:840px; margin:0 auto 20px;
+    font-style:italic;
+    color:var(--ink-soft);
+    border-left:3px solid var(--mustard);
+    padding-left:14px;
+  }
+  .statrow{
+    max-width:840px; margin:0 auto;
+    display:flex; gap:10px; flex-wrap:wrap;
+  }
+  .stat{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:3px;
+    padding:10px 16px;
+    min-width:110px;
+    text-align:center;
+  }
+  .stat b{
+    display:block;
+    font-family:'Fraunces', serif;
+    font-size:1.5rem;
+    color:var(--red);
+  }
+  .stat span{font-size:.78rem; color:var(--ink-soft);}
+  /* ---------- SECTIONS ---------- */
+  .part-label{
+    font-family:'Fraunces', serif;
+    color:var(--mustard);
+    letter-spacing:.06em;
+    font-size:.82rem;
+    margin:0 0 6px;
+  }
+  section.part{padding-top:44px;}
+  section.part > h2{font-size:clamp(1.35rem,3.6vw,1.8rem); margin-bottom:6px;}
+  .part-intro{color:var(--ink-soft); margin-bottom:26px; max-width:64ch;}
+  /* topic card */
+  .topic{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:22px 22px 20px;
+    margin-bottom:22px;
+    position:relative;
+  }
+  .topic .num{
+    font-family:'Fraunces', serif;
+    color:var(--red);
+    font-size:.82rem;
+    display:block;
+    margin-bottom:4px;
+  }
+  .topic h3{font-size:1.22rem; margin-bottom:12px;}
+  .topic h3 .ic{margin-right:8px;}
+  .topic ul{margin:0 0 6px; padding-left:1.15em;}
+  .topic li{margin-bottom:6px;}
+  .topic li b{color:var(--red-soft);}
+  .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px;}
+  .chip{
+    font-size:.78rem;
+    background:var(--paper);
+    border:1px solid var(--line);
+    color:var(--ink-soft);
+    padding:4px 10px;
+    border-radius:20px;
+  }
+  /* tables */
+  .tblwrap{overflow-x:auto; margin:16px 0 4px; border:1px solid var(--line); border-radius:4px;}
+  table{border-collapse:collapse; width:100%; min-width:480px; font-size:.92rem;}
+  caption{
+    caption-side:top;
+    text-align:left;
+    font-family:'Fraunces', serif;
+    padding:10px 14px;
+    background:var(--paper-2);
+    color:var(--ink);
+    font-size:.95rem;
+    border-bottom:1px solid var(--line);
+  }
+  th, td{
+    text-align:left;
+    padding:9px 14px;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+  thead th{
+    background:var(--paper-2);
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:.85rem;
+  }
+  tbody tr:last-child td{border-bottom:none;}
+  tbody tr:nth-child(even){background:rgba(0,0,0,.03);}
+  /* svg figure */
+  figure.diagram{
+    margin:16px 0 6px;
+    padding:16px;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:4px;
+  }
+  figure.diagram svg{width:100%; height:auto; display:block;}
+  figcaption{
+    font-size:.8rem;
+    color:var(--ink-soft);
+    text-align:center;
+    margin-top:8px;
+  }
+  .dsvg-box{fill:var(--panel); stroke:var(--ink); stroke-width:1.5;}
+  .dsvg-box-accent{fill:var(--paper-2); stroke:var(--red); stroke-width:1.6;}
+  .dsvg-line{stroke:var(--ink-soft); stroke-width:1.4; fill:none;}
+  .dsvg-text{font-family:'Lora',serif; fill:var(--ink); font-size:12.5px;}
+  .dsvg-title{font-family:'Fraunces',serif; fill:var(--red); font-size:13px; font-weight:700;}
+  .dsvg-sub{font-family:'Lora',serif; fill:var(--ink-soft); font-size:10.5px; font-style:italic;}
+  /* ---------- QUIZ ---------- */
+  .quiz-topic{margin-bottom:30px;}
+  .quiz-topic > h3{
+    font-size:1.15rem;
+    border-bottom:2px solid var(--line);
+    padding-bottom:8px;
+    margin-bottom:14px;
+  }
+  .question{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:16px 18px;
+    margin-bottom:14px;
+  }
+  .qhead{
+    display:flex; align-items:center; gap:10px; margin-bottom:10px; flex-wrap:wrap;
+  }
+  .qnum{
+    font-family:'Fraunces',serif;
+    color:var(--red);
+    font-weight:700;
+  }
+  .diff{
+    font-size:.72rem;
+    padding:2px 9px;
+    border-radius:20px;
+    border:1px solid var(--line);
+    color:var(--ink-soft);
+  }
+  .diff.facil{border-color:var(--pine); color:var(--pine);}
+  .diff.medio{border-color:var(--mustard); color:var(--mustard);}
+  .diff.dificil{border-color:var(--red); color:var(--red);}
+  .qprompt{margin:0 0 10px; font-weight:600;}
+  .opts{display:flex; flex-direction:column; gap:8px;}
+  .opt{
+    display:flex; gap:9px; align-items:flex-start;
+    padding:8px 10px;
+    border:1px solid transparent;
+    border-radius:4px;
+    cursor:pointer;
+  }
+  .opt:hover{background:rgba(0,0,0,.035); border-color:var(--line);}
+  .opt input{margin-top:4px; accent-color:var(--red);}
+  .progress-bar-wrap{
+    position:sticky; top:0; z-index:5;
+    background:var(--paper); padding:10px 0 6px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:22px;
+  }
+  .progress-line{
+    display:flex; justify-content:space-between; align-items:center;
+    font-size:.84rem; color:var(--ink-soft); margin-bottom:6px;
+  }
+  .progress-track{height:6px; background:var(--paper-2); border-radius:6px; overflow:hidden;}
+  .progress-fill{height:100%; width:0%; background:var(--red); transition:width .25s ease;}
+  .btn{
+    display:inline-block;
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    background:var(--red);
+    color:#F8F0DC;
+    border:none;
+    padding:13px 26px;
+    border-radius:4px;
+    font-size:1rem;
+    cursor:pointer;
+    margin-top:6px;
+  }
+  .btn:hover{background:var(--red-soft);}
+  .btn:disabled{opacity:.55; cursor:not-allowed;}
+  .btn.secondary{
+    background:transparent;
+    color:var(--red);
+    border:1.5px solid var(--red);
+  }
+  /* ---------- RESULTS ---------- */
+  #results{display:none;}
+  #results.show{display:block;}
+  .score-row{
+    display:flex; gap:24px; flex-wrap:wrap; align-items:center;
+    background:var(--panel); border:1px solid var(--line); border-radius:4px;
+    padding:20px; margin-bottom:24px;
+  }
+  .score-num{font-family:'Fraunces',serif; font-size:2.6rem; color:var(--red); line-height:1;}
+  .score-cap{color:var(--ink-soft); font-size:.85rem;}
+  .legend{display:flex; gap:16px; flex-wrap:wrap; font-size:.86rem;}
+  .legend span{display:inline-flex; align-items:center; gap:6px;}
+  .dot{width:11px; height:11px; border-radius:50%; display:inline-block;}
+  .cols2{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-bottom:24px;}
+  @media (max-width:600px){.cols2{grid-template-columns:1fr;}}
+  .perfbox{background:var(--panel); border:1px solid var(--line); border-radius:4px; padding:16px 18px;}
+  .perfbox h4{font-size:1rem; margin-bottom:10px;}
+  .perfbox.ok h4{color:var(--pine);}
+  .perfbox.bad h4{color:var(--red);}
+  .taglist{display:flex; flex-wrap:wrap; gap:8px;}
+  .tag{font-size:.82rem; padding:4px 10px; border-radius:20px; border:1px solid var(--line);}
+  .tag.ok{border-color:var(--pine); color:var(--pine);}
+  .tag.bad{border-color:var(--red); color:var(--red);}
+  .studyplan{list-style:none; margin:0; padding:0;}
+  .studyplan li{
+    padding:12px 14px;
+    background:var(--panel); border:1px solid var(--line); border-left:4px solid var(--mustard);
+    border-radius:3px; margin-bottom:10px;
+  }
+  .studyplan li b{display:block; color:var(--red-soft); margin-bottom:3px;}
+  /* gabarito */
+  .gitem{
+    background:var(--panel); border:1px solid var(--line); border-radius:4px;
+    padding:14px 18px; margin-bottom:10px;
+  }
+  .gitem .gh{display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-bottom:6px;}
+  .badge{
+    font-size:.72rem; font-weight:700; padding:3px 9px; border-radius:20px;
+  }
+  .badge.ok{background:var(--ok-bg); color:var(--pine);}
+  .badge.bad{background:var(--bad-bg); color:var(--red);}
+  .gitem .yourans{font-size:.86rem; color:var(--ink-soft); margin-bottom:2px;}
+  .gitem .correctans{font-size:.86rem; color:var(--pine); margin-bottom:6px;}
+  .gitem .expl{font-size:.92rem;}
+  /* footer */
+  footer{
+    background:var(--paper-2);
+    border-top:6px double var(--line);
+    margin-top:60px;
+    padding:36px 20px 28px;
+  }
+  .footwrap{max-width:840px; margin:0 auto;}
+  .whatsapp{
+    display:inline-block; margin-top:14px;
+    background:var(--pine); color:#F4F1E4;
+    font-family:'Fraunces',serif; font-weight:600;
+    padding:12px 22px; border-radius:4px; text-decoration:none;
+  }
+  .foottag{margin-top:26px; padding-top:18px; border-top:1px solid var(--line); font-size:.82rem; color:var(--ink-soft);}
+  .note{
+    font-size:.86rem; color:var(--ink-soft); background:var(--paper);
+    border:1px dashed var(--line); border-radius:4px; padding:10px 14px; margin-top:16px;
+  }
+</style>
+</head>
+<body>
 
+<header class="top">
+  <div class="brandrow">
+    <svg class="seal" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Selo Curso Preparatório Professora Samanta">
+      <circle cx="50" cy="50" r="46" fill="var(--panel)" stroke="var(--red)" stroke-width="3"/>
+      <circle cx="50" cy="50" r="38" fill="none" stroke="var(--mustard)" stroke-width="1.4" stroke-dasharray="2 4"/>
+      <text x="50" y="46" text-anchor="middle" font-family="Fraunces, serif" font-weight="700" font-size="24" fill="var(--red)">PS</text>
+      <text x="50" y="66" text-anchor="middle" font-family="Lora, serif" font-style="italic" font-size="8.5" fill="var(--ink-soft)">Preparatório</text>
+    </svg>
+    <div class="brand-text">
+      <strong>Curso Preparatório Professora Samanta</strong>
+      <span>Material de Estudo · Língua Portuguesa</span>
+    </div>
+  </div>
+
+  <p class="breadcrumb"><b>Língua Portuguesa</b> · Gêneros Textuais e Gramática</p>
+  <h1 class="title">Gêneros Textuais e Gramática: <em>do palco ao período composto</em></h1>
+  <p class="lede">Revisão completa sobre biografia, autobiografia, teatro — com destaque para Gil Vicente e Ariano Suassuna — e sobre orações subordinadas, da classificação geral às substantivas, às formas desenvolvida/reduzida e às funções do "que", seguida de um questionário diagnóstico com gabarito comentado.</p>
+  <p class="quote">"O que sabemos é uma gota; o que ignoramos é um oceano." — provérbio popular, no espírito do cordel que atravessa esta aula.</p>
+
+  <div class="statrow">
+    <div class="stat"><b>9</b><span>temas</span></div>
+    <div class="stat"><b>27</b><span>questões</span></div>
+    <div class="stat"><b>3</b><span>níveis de dificuldade</span></div>
+    <div class="stat"><b>1</b><span>diagnóstico final</span></div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<!-- ============ PARTE 1 ============ -->
+<section class="part" id="parte1">
+  <p class="part-label">PARTE 1</p>
+  <h2>Revisão dos conteúdos</h2>
+  <p class="part-intro">As características essenciais dos gêneros textuais em estudo e das orações subordinadas — leia com atenção antes de responder ao questionário.</p>
+
+  <!-- 1.1 Biografia -->
+  <div class="topic" id="t-bio">
+    <span class="num">1.1</span>
+    <h3><span class="ic">📖</span>Biografia</h3>
+    <ul>
+      <li><b>Definição</b>: narrativa que conta a vida de uma pessoa, escrita por outra pessoa — o biógrafo.</li>
+      <li><b>Ponto de vista</b>: predominantemente em 3ª pessoa, com compromisso de checagem em fontes, documentos, entrevistas e depoimentos.</li>
+      <li><b>Construção narrativa</b>: mesmo baseada em fatos verificáveis, a biografia seleciona episódios, organiza a cronologia e constrói sentido a partir do olhar do biógrafo — não é uma simples lista de datas.</li>
+      <li><b>Finalidade</b>: registrar, interpretar e, muitas vezes, valorizar (ou criticar) a trajetória de uma pessoa notável.</li>
+      <li><b>Variações</b>: biografia autorizada (com aval do biografado ou da família) e não autorizada.</li>
+    </ul>
+    <div class="chips"><span class="chip">Terceira pessoa</span><span class="chip">Fontes e pesquisa</span><span class="chip">Seleção de episódios</span></div>
+  </div>
+
+  <!-- 1.2 Autobiografia -->
+  <div class="topic" id="t-autobio">
+    <span class="num">1.2</span>
+    <h3><span class="ic">🖋️</span>Autobiografia</h3>
+    <ul>
+      <li><b>Definição</b>: relato em que o próprio autor narra sua vida — autor, narrador e personagem coincidem na mesma pessoa.</li>
+      <li><b>Pacto autobiográfico</b>: expressão usada para o compromisso (implícito) de que quem narra é quem viveu os fatos — mas isso não garante objetividade.</li>
+      <li><b>Memória seletiva</b>: quem escreve escolhe o que lembrar, esquecer ou reorganizar, construindo uma autoimagem — daí seu forte caráter subjetivo.</li>
+      <li><b>Gêneros próximos</b>: diário, memórias e relato pessoal compartilham dessa perspectiva de primeira pessoa.</li>
+    </ul>
+    <div class="tblwrap">
+      <table>
+        <caption>Biografia × Autobiografia</caption>
+        <thead><tr><th>Critério</th><th>Biografia</th><th>Autobiografia</th></tr></thead>
+        <tbody>
+          <tr><td>Quem escreve</td><td>Uma terceira pessoa (biógrafo)</td><td>O próprio biografado</td></tr>
+          <tr><td>Ponto de vista</td><td>Externo, de pesquisa</td><td>Interno, de memória</td></tr>
+          <tr><td>Objetividade</td><td>Busca distanciamento crítico</td><td>Atravessada pela autoimagem</td></tr>
+          <tr><td>Fontes</td><td>Documentos, entrevistas, depoimentos</td><td>Lembranças e registros pessoais</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 1.3 Teatro -->
+  <div class="topic" id="t-teatro">
+    <span class="num">1.3</span>
+    <h3><span class="ic">🎭</span>Teatro</h3>
+    <ul>
+      <li><b>Gênero dramático</b>: texto escrito para ser encenado, com predominância de diálogos entre personagens.</li>
+      <li><b>Rubricas</b>: indicações do autor (entre parênteses ou em itálico) sobre gestos, tom de voz, cenário e movimentação — orientam o encenador e o leitor.</li>
+      <li><b>Estrutura</b>: a peça se organiza em atos e cenas; classicamente segue exposição, conflito, clímax e desfecho, embora o teatro moderno e contemporâneo frequentemente rompa com essa lógica.</li>
+      <li><b>Conflito dramático</b>: motor da ação teatral — o embate de vontades, valores ou forças que move a peça.</li>
+    </ul>
+    <figure class="diagram">
+      <svg viewBox="0 0 640 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Elementos do texto dramático">
+        <rect class="dsvg-box-accent" x="240" y="10" width="160" height="38" rx="4"/>
+        <text class="dsvg-title" x="320" y="34" text-anchor="middle">TEXTO DRAMÁTICO</text>
+
+        <path class="dsvg-line" d="M320 48 L320 68 L120 68 L120 88"/>
+        <path class="dsvg-line" d="M320 48 L320 68 L320 88"/>
+        <path class="dsvg-line" d="M320 48 L320 68 L520 68 L520 88"/>
+
+        <rect class="dsvg-box" x="45" y="88" width="150" height="46" rx="4"/>
+        <text class="dsvg-text" x="120" y="107" text-anchor="middle">Falas</text>
+        <text class="dsvg-sub" x="120" y="123" text-anchor="middle">diálogo e monólogo</text>
+
+        <rect class="dsvg-box" x="245" y="88" width="150" height="46" rx="4"/>
+        <text class="dsvg-text" x="320" y="107" text-anchor="middle">Rubricas</text>
+        <text class="dsvg-sub" x="320" y="123" text-anchor="middle">indicações cênicas</text>
+
+        <rect class="dsvg-box" x="445" y="88" width="150" height="46" rx="4"/>
+        <text class="dsvg-text" x="520" y="107" text-anchor="middle">Estrutura</text>
+        <text class="dsvg-sub" x="520" y="123" text-anchor="middle">atos → cenas</text>
+
+        <path class="dsvg-line" d="M320 134 L320 160"/>
+        <rect class="dsvg-box" x="215" y="160" width="210" height="40" rx="4"/>
+        <text class="dsvg-text" x="320" y="184" text-anchor="middle">Conflito dramático</text>
+      </svg>
+      <figcaption>Elementos que organizam o texto dramático.</figcaption>
+    </figure>
+  </div>
+
+  <!-- 1.4 Gil Vicente -->
+  <div class="topic" id="t-gilvicente">
+    <span class="num">1.4</span>
+    <h3><span class="ic">🏰</span>Gil Vicente e seus autos</h3>
+    <ul>
+      <li><b>Quem foi</b>: dramaturgo e poeta português (c. 1465–c. 1536), considerado o fundador do teatro de língua portuguesa.</li>
+      <li><b>O auto</b>: peça teatral curta, de caráter moralizante ou religioso, com personagens-tipo (alegorias de vícios, virtudes ou grupos sociais).</li>
+      <li><b>Auto da Barca do Inferno</b>: sua obra mais conhecida — personagens de diferentes classes sociais (fidalgo, sapateiro, frade, corregedor etc.) embarcam rumo ao Inferno ou ao Paraíso, sendo julgados conforme seus pecados e vícios.</li>
+      <li><b>Crítica social</b>: por trás do tom religioso, há forte sátira aos costumes, à hipocrisia e à corrupção da sociedade portuguesa do século XVI.</li>
+    </ul>
+    <div class="chips"><span class="chip">Teatro medieval/renascentista</span><span class="chip">Personagens-tipo</span><span class="chip">Sátira social</span></div>
+  </div>
+
+  <!-- 1.5 Ariano Suassuna -->
+  <div class="topic" id="t-suassuna">
+    <span class="num">1.5</span>
+    <h3><span class="ic">🪆</span>Ariano Suassuna</h3>
+    <ul>
+      <li><b>Quem foi</b>: escritor, dramaturgo e professor brasileiro (Paraíba, 1927–2014), uma das maiores vozes da literatura nordestina.</li>
+      <li><b>Auto da Compadecida</b>: sua obra mais famosa, que mistura humor popular, crítica social e religiosidade, dialogando diretamente com a tradição do auto de Gil Vicente.</li>
+      <li><b>Movimento Armorial</b>: criado por Suassuna, propunha uma arte erudita brasileira construída a partir das raízes da cultura popular nordestina — cordel, xilogravura, repente, música de viola e teatro de mamulengo.</li>
+      <li><b>Herança ibérica</b>: Suassuna reconhecia explicitamente a influência do teatro ibérico (Gil Vicente e o Romanceiro) somada à tradição oral do sertão.</li>
+    </ul>
+    <figure class="diagram">
+      <svg viewBox="0 0 640 140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Linha do tempo: de Gil Vicente a Ariano Suassuna">
+        <line x1="60" y1="70" x2="580" y2="70" class="dsvg-line" stroke-width="2"/>
+        <circle cx="90" cy="70" r="7" fill="var(--red)"/>
+        <circle cx="320" cy="70" r="7" fill="var(--mustard)"/>
+        <circle cx="550" cy="70" r="7" fill="var(--pine)"/>
+
+        <text class="dsvg-title" x="90" y="40" text-anchor="middle">Gil Vicente</text>
+        <text class="dsvg-sub" x="90" y="55" text-anchor="middle">Portugal, séc. XVI</text>
+        <text class="dsvg-text" x="90" y="95" text-anchor="middle">Teatro popular</text>
+        <text class="dsvg-text" x="90" y="110" text-anchor="middle">e autos</text>
+
+        <text class="dsvg-title" x="320" y="40" text-anchor="middle">Tradição nordestina</text>
+        <text class="dsvg-sub" x="320" y="55" text-anchor="middle">Brasil, oral e popular</text>
+        <text class="dsvg-text" x="320" y="95" text-anchor="middle">Cordel · repente</text>
+        <text class="dsvg-text" x="320" y="110" text-anchor="middle">mamulengo</text>
+
+        <text class="dsvg-title" x="550" y="40" text-anchor="middle">Ariano Suassuna</text>
+        <text class="dsvg-sub" x="550" y="55" text-anchor="middle">Brasil, séc. XX</text>
+        <text class="dsvg-text" x="550" y="95" text-anchor="middle">Movimento Armorial</text>
+        <text class="dsvg-text" x="550" y="110" text-anchor="middle">Auto da Compadecida</text>
+      </svg>
+      <figcaption>De Gil Vicente à tradição popular nordestina, até o Movimento Armorial de Suassuna.</figcaption>
+    </figure>
+  </div>
+
+  <!-- 1.6 Orações subordinadas -->
+  <div class="topic" id="t-orasub">
+    <span class="num">1.6</span>
+    <h3><span class="ic">🌳</span>Orações subordinadas</h3>
+    <ul>
+      <li><b>Definição</b>: oração que depende sintaticamente de outra (a principal), exercendo em relação a ela uma função sintática — sujeito, objeto, adjunto etc.</li>
+      <li><b>Coordenação × Subordinação</b>: na coordenação, as orações são independentes entre si; na subordinação, uma oração "funciona dentro" da outra.</li>
+      <li><b>Três grandes grupos</b>: substantivas, adjetivas e adverbiais — classificadas conforme a função que exercem.</li>
+    </ul>
+    <figure class="diagram">
+      <svg viewBox="0 0 640 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Classificação das orações subordinadas">
+        <rect class="dsvg-box-accent" x="230" y="8" width="180" height="38" rx="4"/>
+        <text class="dsvg-title" x="320" y="32" text-anchor="middle">Orações subordinadas</text>
+
+        <path class="dsvg-line" d="M320 46 L320 62 L100 62 L100 78"/>
+        <path class="dsvg-line" d="M320 46 L320 78"/>
+        <path class="dsvg-line" d="M320 46 L320 62 L540 62 L540 78"/>
+
+        <rect class="dsvg-box" x="25" y="78" width="150" height="34" rx="4"/>
+        <text class="dsvg-text" x="100" y="99" text-anchor="middle">Substantivas ★</text>
+        <rect class="dsvg-box" x="245" y="78" width="150" height="34" rx="4"/>
+        <text class="dsvg-text" x="320" y="99" text-anchor="middle">Adjetivas</text>
+        <rect class="dsvg-box" x="465" y="78" width="150" height="34" rx="4"/>
+        <text class="dsvg-text" x="540" y="99" text-anchor="middle">Adverbiais</text>
+
+        <path class="dsvg-line" d="M100 112 L100 126"/>
+        <text class="dsvg-sub" x="100" y="140" text-anchor="middle">subjetiva · objetiva direta ★</text>
+        <text class="dsvg-sub" x="100" y="154" text-anchor="middle">objetiva indireta ★ · apositiva ★</text>
+        <text class="dsvg-sub" x="100" y="168" text-anchor="middle">predicativa · compl. nominal</text>
+
+        <path class="dsvg-line" d="M320 112 L320 126"/>
+        <text class="dsvg-sub" x="320" y="140" text-anchor="middle">restritiva</text>
+        <text class="dsvg-sub" x="320" y="154" text-anchor="middle">explicativa</text>
+
+        <path class="dsvg-line" d="M540 112 L540 126"/>
+        <text class="dsvg-sub" x="540" y="140" text-anchor="middle">causal · temporal · condicional</text>
+        <text class="dsvg-sub" x="540" y="154" text-anchor="middle">concessiva · comparativa etc.</text>
+
+        <text class="dsvg-sub" x="320" y="200" text-anchor="middle" font-size="10">★ foco desta aula — ver item 1.7</text>
+      </svg>
+      <figcaption>Os três grandes grupos de orações subordinadas.</figcaption>
+    </figure>
+  </div>
+
+  <!-- 1.7 Substantivas -->
+  <div class="topic" id="t-orasubst">
+    <span class="num">1.7</span>
+    <h3><span class="ic">🔗</span>Orações subordinadas substantivas: objetiva direta, objetiva indireta e apositiva</h3>
+    <ul>
+      <li><b>Objetiva direta</b>: completa um verbo transitivo direto, sem preposição — funciona como objeto direto da oração principal.</li>
+      <li><b>Objetiva indireta</b>: completa um verbo transitivo indireto, exigindo a preposição pedida por esse verbo — funciona como objeto indireto.</li>
+      <li><b>Apositiva</b>: desenvolve, explica ou esclarece um termo antecedente (geralmente após dois-pontos), funcionando como um aposto em forma de oração.</li>
+      <li>Todas são introduzidas, em geral, pela conjunção integrante <b>"que"</b> (ou "se", em interrogativas indiretas).</li>
+    </ul>
+    <div class="tblwrap">
+      <table>
+        <caption>Orações substantivas em foco</caption>
+        <thead><tr><th>Tipo</th><th>Conectivo típico</th><th>Função sintática</th><th>Exemplo</th></tr></thead>
+        <tbody>
+          <tr><td>Objetiva direta</td><td>que (sem preposição)</td><td>Objeto direto</td><td>Espero <i>que você venha</i>.</td></tr>
+          <tr><td>Objetiva indireta</td><td>preposição + que</td><td>Objeto indireto</td><td>Preciso <i>de que você me ajude</i>.</td></tr>
+          <tr><td>Apositiva</td><td>que, após dois-pontos</td><td>Aposto</td><td>Só desejo uma coisa: <i>que todos sejam felizes</i>.</td></tr>
+          <tr><td>Outras (contexto)</td><td>que / se</td><td>Sujeito, predicativo, compl. nominal</td><td><i>Que ele venha</i> é certo. (subjetiva)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 1.8 Desenvolvidas e reduzidas -->
+  <div class="topic" id="t-desenred">
+    <span class="num">1.8</span>
+    <h3><span class="ic">✂️</span>Orações subordinadas desenvolvidas e reduzidas</h3>
+    <ul>
+      <li><b>Desenvolvida</b>: apresenta conjunção (ou pronome relativo) e verbo em forma finita — indicativo, subjuntivo ou imperativo.</li>
+      <li><b>Reduzida</b>: não tem conjunção explícita e apresenta o verbo em forma nominal — infinitivo, gerúndio ou particípio.</li>
+      <li>Uma reduzida sempre pode ser transformada em desenvolvida equivalente, e vice-versa — esse é o principal teste para identificá-las.</li>
+    </ul>
+    <div class="tblwrap">
+      <table>
+        <caption>Desenvolvida × reduzida</caption>
+        <thead><tr><th>Forma</th><th>Verbo</th><th>Exemplo</th><th>Equivalente desenvolvida</th></tr></thead>
+        <tbody>
+          <tr><td>Reduzida de infinitivo</td><td>infinitivo</td><td><i>Ao chegar</i> em casa, ela descansou.</td><td>Quando ela chegou em casa...</td></tr>
+          <tr><td>Reduzida de gerúndio</td><td>gerúndio</td><td><i>Chegando</i> em casa, ela descansou.</td><td>Assim que ela chegou em casa...</td></tr>
+          <tr><td>Reduzida de particípio</td><td>particípio</td><td><i>Terminado</i> o trabalho, saíram.</td><td>Depois que o trabalho foi terminado...</td></tr>
+          <tr><td>Desenvolvida</td><td>modo finito</td><td>Quando <i>chegou</i> em casa, ela descansou.</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 1.9 Funções do que -->
+  <div class="topic" id="t-funcoesque">
+    <span class="num">1.9</span>
+    <h3><span class="ic">❓</span>As funções do "que"</h3>
+    <ul>
+      <li><b>Pronome relativo</b>: retoma um termo antecedente e introduz oração subordinada adjetiva. Ex.: O livro <i>que</i> comprei é ótimo.</li>
+      <li><b>Conjunção integrante</b>: introduz oração subordinada substantiva, sem retomar nenhum termo. Ex.: Quero <i>que</i> você estude.</li>
+      <li><b>Conjunção subordinativa consecutiva</b>: liga-se a "tão", "tal", "tanto" etc., indicando consequência. Ex.: É tão inteligente <i>que</i> resolve tudo.</li>
+      <li><b>Pronome/advérbio interrogativo ou exclamativo</b>: em perguntas e exclamações. Ex.: <i>Que</i> dia lindo!</li>
+      <li><b>Partícula expletiva (de realce)</b>: pode ser retirada sem alteração de sentido. Ex.: Ele é <i>que</i> nem chegou.</li>
+    </ul>
+    <figure class="diagram">
+      <svg viewBox="0 0 640 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="As cinco funções do que">
+        <circle cx="320" cy="130" r="34" class="dsvg-box-accent"/>
+        <text class="dsvg-title" x="320" y="136" text-anchor="middle">QUE</text>
+
+        <line x1="320" y1="96" x2="320" y2="40" class="dsvg-line"/>
+        <line x1="292" y1="152" x2="120" y2="220" class="dsvg-line"/>
+        <line x1="354" y1="152" x2="520" y2="220" class="dsvg-line"/>
+        <line x1="286" y1="112" x2="90" y2="70" class="dsvg-line"/>
+        <line x1="354" y1="112" x2="550" y2="70" class="dsvg-line"/>
+
+        <rect class="dsvg-box" x="240" y="6" width="160" height="34" rx="4"/>
+        <text class="dsvg-text" x="320" y="27" text-anchor="middle">Pronome relativo</text>
+
+        <rect class="dsvg-box" x="10" y="44" width="160" height="34" rx="4"/>
+        <text class="dsvg-text" x="90" y="65" text-anchor="middle">Conj. integrante</text>
+
+        <rect class="dsvg-box" x="470" y="44" width="160" height="34" rx="4"/>
+        <text class="dsvg-text" x="550" y="65" text-anchor="middle">Conj. consecutiva</text>
+
+        <rect class="dsvg-box" x="30" y="204" width="180" height="34" rx="4"/>
+        <text class="dsvg-text" x="120" y="225" text-anchor="middle" font-size="11">Interrogativo/exclamativo</text>
+
+        <rect class="dsvg-box" x="430" y="204" width="180" height="34" rx="4"/>
+        <text class="dsvg-text" x="520" y="225" text-anchor="middle">Partícula expletiva</text>
+      </svg>
+      <figcaption>As cinco principais funções do "que" na oração.</figcaption>
+    </figure>
+  </div>
+
+  <!-- Quadro-resumo -->
+  <div class="tblwrap">
+    <table>
+      <caption>🗂️ Quadro-resumo dos temas</caption>
+      <thead><tr><th>Assunto</th><th>Categoria</th><th>Ideia-chave</th></tr></thead>
+      <tbody>
+        <tr><td>Biografia</td><td>Gênero textual</td><td>Vida de alguém, narrada por outra pessoa</td></tr>
+        <tr><td>Autobiografia</td><td>Gênero textual</td><td>Vida narrada pelo próprio autor</td></tr>
+        <tr><td>Teatro</td><td>Gênero textual</td><td>Texto dramático feito para encenação</td></tr>
+        <tr><td>Gil Vicente e seus autos</td><td>Gênero textual</td><td>Teatro popular e moralizante do séc. XVI</td></tr>
+        <tr><td>Ariano Suassuna</td><td>Gênero textual</td><td>Auto da Compadecida e Movimento Armorial</td></tr>
+        <tr><td>Orações subordinadas</td><td>Gramática</td><td>Substantivas, adjetivas e adverbiais</td></tr>
+        <tr><td>Substantivas</td><td>Gramática</td><td>Objetiva direta, indireta e apositiva</td></tr>
+        <tr><td>Desenvolvidas e reduzidas</td><td>Gramática</td><td>Verbo finito × forma nominal</td></tr>
+        <tr><td>Funções do "que"</td><td>Gramática</td><td>Relativo, integrante, consecutivo e mais</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- ============ PARTE 2 ============ -->
+<section class="part" id="parte2">
+  <p class="part-label">PARTE 2</p>
+  <h2>Questionário diagnóstico</h2>
+  <p class="part-intro">📋 São <b>27 questões</b> — 3 para cada um dos 9 assuntos revisados, nos três níveis de dificuldade (fácil, médio e difícil). Responda a todas e clique em <b>Corrigir questionário</b> para ver o resultado, o gabarito comentado e a sugestão de estudo.</p>
+
+  <div class="progress-bar-wrap">
+    <div class="progress-line">
+      <span id="progresstext">0 de 27 respondidas</span>
+      <span id="progresspct">0%</span>
+    </div>
+    <div class="progress-track"><div class="progress-fill" id="progressfill"></div></div>
+  </div>
+
+  <div id="quizhost"></div>
+
+  <button class="btn" id="correctbtn">Corrigir questionário</button>
+</section>
+
+<div class="rule"></div>
+
+<!-- ============ PARTE 3 ============ -->
+<section class="part" id="parte3">
+  <p class="part-label">PARTE 3</p>
+  <h2>Seu desempenho</h2>
+  <div id="results">
+    <div class="score-row">
+      <svg id="piechart" width="150" height="150" viewBox="0 0 150 150" role="img" aria-label="Gráfico de acertos e erros"></svg>
+      <div>
+        <div class="score-num"><span id="scorecount">0</span>/27</div>
+        <div class="score-cap">questões corretas (<span id="scorepct">0</span>%)</div>
+        <div class="legend" style="margin-top:10px;">
+          <span><i class="dot" style="background:var(--pine)"></i>Acertos</span>
+          <span><i class="dot" style="background:var(--red)"></i>Erros</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cols2">
+      <div class="perfbox ok">
+        <h4>✓ Maior facilidade</h4>
+        <div class="taglist" id="easytopics"></div>
+      </div>
+      <div class="perfbox bad">
+        <h4>⚠ Maior dificuldade</h4>
+        <div class="taglist" id="hardtopics"></div>
+      </div>
+    </div>
+
+    <div class="tblwrap">
+      <table>
+        <caption>Desempenho por assunto</caption>
+        <thead><tr><th>Assunto</th><th>Acertos</th><th>%</th></tr></thead>
+        <tbody id="perftable"></tbody>
+      </table>
+    </div>
+
+    <h3 style="margin-top:28px;">📚 Estudo orientado sugerido</h3>
+    <p class="part-intro" style="margin-bottom:14px;">Roteiro personalizado construído a partir dos seus pontos fracos.</p>
+    <ul class="studyplan" id="studyplan"></ul>
+  </div>
+  <p id="noresults" class="part-intro">Responda ao questionário acima e clique em <b>Corrigir questionário</b> para ver seu desempenho aqui.</p>
+</section>
+
+<div class="rule"></div>
+
+<!-- ============ PARTE 4 ============ -->
+<section class="part" id="parte4">
+  <p class="part-label">PARTE 4</p>
+  <h2>Gabarito comentado</h2>
+  <p class="part-intro" id="gabintro">Corrija o questionário acima para ver aqui a explicação de cada uma das 27 questões.</p>
+  <div id="gabarito"></div>
+</section>
+
+</div><!-- /wrap -->
+
+<footer>
+  <div class="footwrap">
+    <p class="part-label" style="margin-bottom:2px;">PARTE 5</p>
+    <h2 style="font-size:1.4rem;">Fale com o professor</h2>
+    <p>Ficou com dúvidas sobre gêneros textuais, teatro, Gil Vicente, Ariano Suassuna ou orações subordinadas? Chame o professor responsável diretamente pelo WhatsApp.</p>
+    <p style="margin-bottom:2px;"><b>Professor responsável</b></p>
+    <p style="font-family:'Fraunces',serif; font-size:1.1rem; margin-top:0;">Edvan Souza</p>
+    <a class="whatsapp" href="https://wa.me/5581987461998" target="_blank" rel="noopener">Entrar em contato via WhatsApp</a>
+
+    <div class="foottag">
+      <b>Professora Samanta — Cursos Preparatórios</b><br>
+      Língua Portuguesa · Conteúdo: Gêneros Textuais (Biografia, Autobiografia, Teatro, Gil Vicente, Ariano Suassuna) e Gramática (Orações Subordinadas)
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  var topics = [
+    {key:"bio", label:"Biografia"},
+    {key:"autobio", label:"Autobiografia"},
+    {key:"teatro", label:"Teatro"},
+    {key:"gilvicente", label:"Gil Vicente e seus autos"},
+    {key:"suassuna", label:"Ariano Suassuna"},
+    {key:"orasub", label:"Orações subordinadas"},
+    {key:"orasubst", label:"Orações substantivas"},
+    {key:"desenred", label:"Desenvolvidas e reduzidas"},
+    {key:"funcoesque", label:"Funções do \"que\""}
+  ];
+
+  var studyTips = {
+    bio:"Releia a seção sobre Biografia e pratique identificar, em textos curtos, a diferença entre narrar \"sobre\" alguém (terceira pessoa) e narrar \"como\" alguém (primeira pessoa).",
+    autobio:"Revise o conceito de \"pacto autobiográfico\" e reflita sobre como a memória seleciona e reconstrói os fatos ao narrar a própria vida.",
+    teatro:"Releia a estrutura do texto dramático (diálogo, rubrica, ato, cena) e observe como esses elementos aparecem em um trecho de peça teatral.",
+    gilvicente:"Revise as características do \"auto\" vicentino — personagens-tipo, crítica social e viagem alegórica — usando o Auto da Barca do Inferno como referência.",
+    suassuna:"Estude a relação entre a obra de Suassuna e a cultura popular nordestina (cordel, mamulengo, repente) e o conceito de Movimento Armorial.",
+    orasub:"Revise a diferença entre coordenação e subordinação e memorize os três grandes grupos de orações subordinadas.",
+    orasubst:"Pratique identificar o verbo da oração principal e a preposição que ele exige, para diferenciar objetiva direta de objetiva indireta; releia o conceito de apositiva.",
+    desenred:"Treine transformar orações desenvolvidas em reduzidas (e vice-versa), prestando atenção à forma nominal do verbo (infinitivo, gerúndio, particípio).",
+    funcoesque:"Monte um pequeno quadro pessoal com exemplos de cada função do \"que\" (relativo, conjunção integrante, consecutivo, exclamativo, expletivo) para fixar as diferenças."
+  };
+
+  var questions = [
+    {id:1, t:"bio", d:"facil", p:"O que caracteriza um texto biográfico?",
+     o:["É escrito pela própria pessoa sobre sua vida","Narra a vida de uma pessoa, escrita por outra pessoa (terceira pessoa)","É uma obra de ficção sobre personagens inventados","É um texto dramático encenado no teatro"], c:1,
+     e:"Biografia é, por definição, o relato da vida de alguém feito por outra pessoa — o biógrafo — geralmente em terceira pessoa."},
+    {id:2, t:"bio", d:"medio", p:"Em uma biografia, a linguagem e o ponto de vista predominantes costumam ser:",
+     o:["Subjetivos, pois expressam apenas as opiniões íntimas do biografado","Em terceira pessoa, buscando compromisso com fatos verificáveis, ainda que ordenados pelo olhar do biógrafo","Exclusivamente poéticos, sem compromisso com a cronologia","Sempre em discurso direto e dialogado, como uma peça teatral"], c:1,
+     e:"A biografia é escrita em terceira pessoa e busca embasamento em fatos e fontes, mesmo que a narrativa seja organizada segundo a perspectiva do biógrafo."},
+    {id:3, t:"bio", d:"dificil", p:"A biografia se diferencia do texto puramente jornalístico/histórico principalmente por:",
+     o:["Não poder utilizar nenhuma fonte documental","Narrar exclusivamente fatos públicos e institucionais, sem qualquer construção narrativa","Organizar fatos verificáveis em uma narrativa com construção de sentido, seleção de episódios e recursos literários, guiada pela perspectiva do biógrafo","Ser sempre encomendada e autorizada pelo biografado, o que a torna imparcial"], c:2,
+     e:"O traço distintivo da biografia é justamente transformar fatos pesquisados em narrativa: há seleção, organização e, muitas vezes, recursos literários — sem deixar de se apoiar em fontes verificáveis."},
+
+    {id:4, t:"autobio", d:"facil", p:"Autobiografia é o texto em que:",
+     o:["O autor narra a própria vida","Um jornalista entrevista uma celebridade","Um ator interpreta a vida de outra pessoa","Um historiador registra fatos de um povo"], c:0,
+     e:"Na autobiografia, autor, narrador e personagem principal coincidem: quem escreve narra sua própria trajetória."},
+    {id:5, t:"autobio", d:"medio", p:"Um dos principais desafios de interpretação da autobiografia como fonte é:",
+     o:["A ausência total de subjetividade, já que quem narra viveu os fatos","O chamado \"pacto autobiográfico\", que pressupõe identidade entre autor, narrador e personagem, mas não elimina a seleção e a reconstrução subjetiva da memória","O fato de ser sempre escrita em terceira pessoa","A obrigatoriedade de ser publicada apenas após a morte do autor"], c:1,
+     e:"Mesmo garantindo que quem narra é quem viveu, o pacto autobiográfico não impede que a memória seja seletiva e reconstrutiva — daí a forte subjetividade do gênero."},
+    {id:6, t:"autobio", d:"dificil", p:"Comparando biografia e autobiografia, é correto afirmar que:",
+     o:["Ambas são idênticas quanto ao ponto de vista narrativo","A autobiografia garante maior objetividade histórica que a biografia, pois elimina qualquer interpretação externa","A biografia depende da pesquisa e do distanciamento crítico de terceiros, enquanto a autobiografia é atravessada pela memória seletiva e pela autoimagem de quem narra a própria trajetória","Somente a biografia pode empregar recursos literários; a autobiografia é sempre um relato cronológico sem elaboração"], c:2,
+     e:"A diferença central está no ponto de vista: a biografia parte de pesquisa e distanciamento externo; a autobiografia, da memória e da autoimagem de quem viveu os fatos."},
+
+    {id:7, t:"teatro", d:"facil", p:"O texto teatral distingue-se de outros gêneros narrativos principalmente por:",
+     o:["Ser sempre escrito em versos","Ser estruturado para a encenação, com predominância de diálogos e rubricas","Não apresentar nenhum tipo de conflito","Ser necessariamente cômico"], c:1,
+     e:"O texto dramático é escrito para ser encenado, organizando-se em diálogos entre personagens e rubricas com indicações cênicas."},
+    {id:8, t:"teatro", d:"medio", p:"As rubricas, elementos característicos do texto dramático, têm a função de:",
+     o:["Substituir as falas das personagens","Indicar ao leitor/encenador informações cênicas como gestos, tom de voz, cenário e movimentação","Apresentar a opinião do autor sobre a peça","Narrar os acontecimentos anteriores ao início da peça"], c:1,
+     e:"As rubricas são as indicações do dramaturgo (geralmente entre parênteses ou em itálico) sobre como a cena deve ser encenada."},
+    {id:9, t:"teatro", d:"dificil", p:"Sobre a estrutura clássica do texto dramático (exposição, conflito, clímax e desfecho), é correto dizer que:",
+     o:["É uma estrutura fixa e obrigatória em toda peça teatral, sem exceções, mesmo no teatro contemporâneo","Organiza tradicionalmente a progressão da ação dramática, mas muitas peças modernas e contemporâneas subvertem, fragmentam ou dispensam essa lógica","Só se aplica a comédias, nunca a tragédias","Descreve apenas a divisão em atos e cenas, sem relação com o conflito da trama"], c:1,
+     e:"Essa estrutura é uma referência clássica, útil para analisar muitas peças, mas o teatro moderno e contemporâneo frequentemente a rompe ou reinventa."},
+
+    {id:10, t:"gilvicente", d:"facil", p:"Gil Vicente é considerado:",
+     o:["O fundador do teatro de língua portuguesa e figura central do teatro do século XVI","Um dramaturgo brasileiro contemporâneo","O autor do Auto da Compadecida","Um poeta exclusivamente lírico, sem produção teatral"], c:0,
+     e:"Gil Vicente, dramaturgo português dos séculos XV-XVI, é tradicionalmente apontado como o fundador do teatro em língua portuguesa."},
+    {id:11, t:"gilvicente", d:"medio", p:"O \"auto\", forma teatral cultivada por Gil Vicente, caracteriza-se por:",
+     o:["Ser uma peça longa, dividida em cinco atos, de tema exclusivamente histórico","Ser uma peça teatral curta, de caráter moralizante ou religioso, com personagens alegóricos que representam vícios, virtudes ou tipos sociais","Ser um gênero exclusivamente musical, sem texto dramático","Ser restrito à representação de temas mitológicos greco-romanos"], c:1,
+     e:"O auto vicentino é uma peça breve, de fundo moralizante ou religioso, povoada por personagens-tipo que representam vícios, virtudes ou grupos sociais."},
+    {id:12, t:"gilvicente", d:"dificil", p:"No Auto da Barca do Inferno, a viagem de barca é usada como recurso estrutural para:",
+     o:["Narrar uma aventura marítima real vivida pelo autor","Apresentar, por meio do julgamento de diferentes tipos sociais que embarcam rumo ao Inferno ou ao Paraíso, uma crítica satírica aos costumes e vícios da sociedade da época","Descrever tecnicamente a navegação portuguesa do século XVI","Evitar qualquer crítica social, mantendo um tom estritamente religioso e solene"], c:1,
+     e:"A barca funciona como alegoria de julgamento: cada personagem embarcado representa um tipo social, e seu destino (Inferno ou Paraíso) expõe a crítica de Gil Vicente aos vícios da época."},
+
+    {id:13, t:"suassuna", d:"facil", p:"Ariano Suassuna, autor do Auto da Compadecida, é um escritor:",
+     o:["Português do século XVI","Brasileiro, ligado à cultura e à literatura nordestina, criador do Movimento Armorial","Exclusivamente poeta modernista de São Paulo","Dramaturgo argentino"], c:1,
+     e:"Suassuna foi um escritor brasileiro, nascido na Paraíba, profundamente ligado à cultura nordestina e criador do Movimento Armorial."},
+    {id:14, t:"suassuna", d:"medio", p:"A obra de Ariano Suassuna dialoga fortemente com:",
+     o:["O teatro grego clássico, sem qualquer relação com a cultura popular","A cultura popular nordestina — cordel, repente, teatro de mamulengo e festas populares — além da tradição ibérica, como a de Gil Vicente","Exclusivamente o cinema hollywoodiano","A tradição indígena amazônica, sem relação com influências ibéricas"], c:1,
+     e:"A obra de Suassuna bebe diretamente da cultura popular do Nordeste e da tradição ibérica (incluindo Gil Vicente), unindo essas duas raízes."},
+    {id:15, t:"suassuna", d:"dificil", p:"O Movimento Armorial, criado por Ariano Suassuna, propunha:",
+     o:["O abandono de toda tradição popular em favor de uma estética estrangeira","A criação de uma arte erudita brasileira construída a partir das raízes da cultura popular do Nordeste (cordel, xilogravura, viola, mamulengo), unindo popular e erudito","Restringir-se apenas à música instrumental europeia","Negar qualquer influência da tradição ibérica na cultura nordestina"], c:1,
+     e:"O Armorial buscava justamente erguer uma arte erudita brasileira a partir das raízes populares nordestinas, articulando popular e erudito."},
+
+    {id:16, t:"orasub", d:"facil", p:"Uma oração subordinada é aquela que:",
+     o:["Tem sentido completo e independe de outra oração","Depende sintaticamente de outra oração (a principal), exercendo em relação a ela uma função sintática","É sempre separada por vírgula da oração principal, sem exceção","Só pode aparecer em textos formais e jurídicos"], c:1,
+     e:"Subordinação implica dependência sintática: a oração subordinada exerce uma função (sujeito, objeto, adjunto...) em relação à oração principal."},
+    {id:17, t:"orasub", d:"medio", p:"As orações subordinadas classificam-se tradicionalmente em três grandes grupos, de acordo com a função que exercem. São eles:",
+     o:["Coordenadas, subordinadas e absolutas","Substantivas, adjetivas e adverbiais","Diretas, indiretas e apositivas","Desenvolvidas, reduzidas e assindéticas"], c:1,
+     e:"Os três grandes grupos são substantivas, adjetivas e adverbiais — cada um se subdivide em tipos mais específicos."},
+    {id:18, t:"orasub", d:"dificil", p:"Sobre a diferença entre coordenação e subordinação, é correto afirmar que:",
+     o:["Na coordenação, as orações são sintaticamente independentes entre si, apenas conectadas em sentido; na subordinação, uma oração exerce função sintática dentro da outra","Coordenação e subordinação são sinônimos e podem ser usadas indistintamente","Só existe subordinação quando há conjunção subordinativa explícita; orações reduzidas são sempre coordenadas","Na subordinação, nunca há conectivo algum entre as orações"], c:0,
+     e:"A distinção central é sintática: coordenadas são independentes entre si; subordinadas cumprem uma função sintática dentro da oração de que dependem."},
+
+    {id:19, t:"orasubst", d:"facil", p:"Na frase \"Espero que você venha.\", a oração destacada exerce a função de:",
+     o:["Sujeito","Objeto direto do verbo \"esperar\"","Aposto","Adjunto adverbial"], c:1,
+     e:"\"Esperar\" é transitivo direto; a oração \"que você venha\" completa esse verbo sem preposição, funcionando como objeto direto."},
+    {id:20, t:"orasubst", d:"medio", p:"Na frase \"Preciso de que você me ajude.\", a oração em destaque classifica-se como:",
+     o:["Subordinada substantiva objetiva direta","Subordinada substantiva objetiva indireta, pois completa o verbo \"precisar\", que exige a preposição \"de\"","Subordinada substantiva apositiva","Subordinada adjetiva restritiva"], c:1,
+     e:"\"Precisar\" é transitivo indireto e rege a preposição \"de\"; por isso a oração que o completa é objetiva indireta."},
+    {id:21, t:"orasubst", d:"dificil", p:"Na frase \"Só desejo uma coisa: que todos sejam felizes.\", a oração destacada classifica-se como subordinada substantiva apositiva porque:",
+     o:["Funciona como sujeito da oração principal","Desenvolve, explica ou esclarece o termo antecedente (\"uma coisa\"), funcionando como um aposto explicativo em forma de oração","Completa o sentido de um verbo transitivo direto, funcionando como objeto direto","É sempre introduzida obrigatoriamente por preposição"], c:1,
+     e:"A oração explica o termo \"uma coisa\", exatamente como faria um aposto — por isso é classificada como apositiva."},
+
+    {id:22, t:"desenred", d:"facil", p:"Uma oração subordinada desenvolvida caracteriza-se por:",
+     o:["Apresentar o verbo no infinitivo, gerúndio ou particípio, sem conectivo","Apresentar conjunção (ou pronome relativo) e verbo em uma das formas finitas (indicativo, subjuntivo ou imperativo)","Nunca apresentar sujeito próprio","Ser sempre mais curta que a oração reduzida correspondente"], c:1,
+     e:"Desenvolvida = conjunção/pronome relativo + verbo em forma finita. É o oposto da reduzida, que usa forma nominal do verbo."},
+    {id:23, t:"desenred", d:"medio", p:"Na frase \"Ao chegar em casa, ela descansou.\", a oração destacada é uma subordinada:",
+     o:["Desenvolvida adverbial temporal","Reduzida de infinitivo, com valor adverbial temporal (equivalente a \"Quando chegou em casa\")","Reduzida de gerúndio","Substantiva objetiva direta"], c:1,
+     e:"O verbo está no infinitivo (\"chegar\") e não há conjunção explícita — trata-se de reduzida de infinitivo, equivalente a \"quando ela chegou em casa\"."},
+    {id:24, t:"desenred", d:"dificil", p:"Considere: \"Terminado o trabalho, os funcionários foram embora.\" Essa oração reduzida:",
+     o:["Está no gerúndio e tem valor causal","Está no particípio, tem valor temporal/causal (equivalente a \"Depois que o trabalho foi terminado\") e apresenta sujeito próprio (\"o trabalho\")","É uma oração coordenada assindética","É uma reduzida de infinitivo pessoal"], c:1,
+     e:"\"Terminado\" é particípio; a oração equivale a \"depois que/como o trabalho foi terminado\" e tem sujeito próprio (\"o trabalho\"), diferente do sujeito da oração principal."},
+
+    {id:25, t:"funcoesque", d:"facil", p:"Na frase \"O livro que comprei é ótimo.\", a palavra \"que\" funciona como:",
+     o:["Conjunção integrante","Pronome relativo, retomando \"o livro\" e introduzindo uma oração subordinada adjetiva","Partícula de realce, podendo ser retirada sem alteração de sentido","Interjeição"], c:1,
+     e:"\"Que\" retoma \"o livro\" (antecedente) e introduz uma oração adjetiva — por isso é pronome relativo."},
+    {id:26, t:"funcoesque", d:"medio", p:"Na frase \"Quero que você estude.\", a palavra \"que\" classifica-se como:",
+     o:["Pronome relativo","Conjunção integrante (subordinativa substantiva), pois introduz uma oração substantiva sem retomar nenhum termo antecedente","Conjunção coordenativa aditiva","Advérbio de intensidade"], c:1,
+     e:"Aqui \"que\" não retoma nenhum termo anterior; apenas introduz a oração substantiva objetiva direta — função de conjunção integrante."},
+    {id:27, t:"funcoesque", d:"dificil", p:"Em \"Que dia lindo!\" e em \"Ele é tão inteligente que resolve tudo rápido.\", a palavra \"que\" exerce, respectivamente, as funções de:",
+     o:["Pronome relativo e conjunção integrante, em ambos os casos","Pronome/advérbio exclamativo (intensificando \"dia\") e conjunção subordinativa consecutiva (introduzindo a consequência de \"tão inteligente\")","Conjunção coordenativa e pronome indefinido","Interjeição e preposição"], c:1,
+     e:"No primeiro caso, \"que\" reforça o substantivo em uma exclamação; no segundo, liga-se a \"tão\" para introduzir a consequência — função consecutiva."}
+  ];
+
+  // ---------- render quiz ----------
+  var quizhost = document.getElementById("quizhost");
+  var letters = ["A","B","C","D"];
+  var diffLabel = {facil:"Fácil", medio:"Médio", dificil:"Difícil"};
+
+  topics.forEach(function(top){
+    var block = document.createElement("div");
+    block.className = "quiz-topic";
+    var h3 = document.createElement("h3");
+    h3.textContent = top.label;
+    block.appendChild(h3);
+
+    questions.filter(function(q){return q.t === top.key;}).forEach(function(q){
+      var card = document.createElement("div");
+      card.className = "question";
+
+      var head = document.createElement("div");
+      head.className = "qhead";
+      var num = document.createElement("span");
+      num.className = "qnum";
+      num.textContent = "Questão " + q.id;
+      var diff = document.createElement("span");
+      diff.className = "diff " + q.d;
+      diff.textContent = diffLabel[q.d];
+      head.appendChild(num);
+      head.appendChild(diff);
+      card.appendChild(head);
+
+      var prompt = document.createElement("p");
+      prompt.className = "qprompt";
+      prompt.textContent = q.p;
+      card.appendChild(prompt);
+
+      var opts = document.createElement("div");
+      opts.className = "opts";
+      q.o.forEach(function(optText, idx){
+        var label = document.createElement("label");
+        label.className = "opt";
+        var input = document.createElement("input");
+        input.type = "radio";
+        input.name = "q" + q.id;
+        input.value = idx;
+        input.addEventListener("change", updateProgress);
+        var span = document.createElement("span");
+        span.textContent = letters[idx] + ") " + optText;
+        label.appendChild(input);
+        label.appendChild(span);
+        opts.appendChild(label);
+      });
+      card.appendChild(opts);
+      block.appendChild(card);
+    });
+
+    quizhost.appendChild(block);
+  });
+
+  function updateProgress(){
+    var answered = 0;
+    questions.forEach(function(q){
+      if (document.querySelector('input[name="q' + q.id + '"]:checked')) answered++;
+    });
+    var pct = Math.round((answered / questions.length) * 100);
+    document.getElementById("progresstext").textContent = answered + " de " + questions.length + " respondidas";
+    document.getElementById("progresspct").textContent = pct + "%";
+    document.getElementById("progressfill").style.width = pct + "%";
+  }
+
+  // ---------- correction ----------
+  document.getElementById("correctbtn").addEventListener("click", function(){
+    var totalCorrect = 0;
+    var perTopic = {};
+    topics.forEach(function(top){ perTopic[top.key] = {correct:0, total:0}; });
+
+    var gabHtml = "";
+    questions.forEach(function(q){
+      var checked = document.querySelector('input[name="q' + q.id + '"]:checked');
+      var chosenIdx = checked ? parseInt(checked.value, 10) : -1;
+      var isCorrect = chosenIdx === q.c;
+      if (isCorrect) totalCorrect++;
+      perTopic[q.t].total++;
+      if (isCorrect) perTopic[q.t].correct++;
+
+      var yourAnsText = chosenIdx >= 0 ? (letters[chosenIdx] + ") " + q.o[chosenIdx]) : "não respondida";
+      gabHtml += '<div class="gitem">' +
+        '<div class="gh"><span class="qnum">Questão ' + q.id + '</span>' +
+        '<span class="diff ' + q.d + '">' + diffLabel[q.d] + '</span>' +
+        '<span class="badge ' + (isCorrect ? "ok" : "bad") + '">' + (isCorrect ? "Correta" : "Incorreta") + '</span></div>' +
+        '<p class="qprompt" style="margin-bottom:8px;">' + q.p + '</p>' +
+        '<p class="yourans">Sua resposta: ' + yourAnsText + '</p>' +
+        '<p class="correctans">Gabarito: ' + letters[q.c] + ') ' + q.o[q.c] + '</p>' +
+        '<p class="expl">' + q.e + '</p>' +
+      '</div>';
+    });
+
+    document.getElementById("gabarito").innerHTML = gabHtml;
+    document.getElementById("gabintro").style.display = "none";
+
+    var scorePct = Math.round((totalCorrect / questions.length) * 100);
+    document.getElementById("scorecount").textContent = totalCorrect;
+    document.getElementById("scorepct").textContent = scorePct;
+
+    drawPie(totalCorrect, questions.length - totalCorrect);
+
+    var topicPct = topics.map(function(top){
+      var d = perTopic[top.key];
+      return {key:top.key, label:top.label, correct:d.correct, total:d.total, pct: d.total ? Math.round((d.correct/d.total)*100) : 0};
+    });
+
+    var maxPct = Math.max.apply(null, topicPct.map(function(t){return t.pct;}));
+    var minPct = Math.min.apply(null, topicPct.map(function(t){return t.pct;}));
+
+    var easyHtml = "";
+    var hardHtml = "";
+    topicPct.forEach(function(t){
+      if (t.pct === maxPct) easyHtml += '<span class="tag ok">' + t.label + ' (' + t.pct + '%)</span>';
+      if (t.pct === minPct && minPct < 100) hardHtml += '<span class="tag bad">' + t.label + ' (' + t.pct + '%)</span>';
+    });
+    if (maxPct === minPct) {
+      hardHtml = '<span class="tag bad">Desempenho equilibrado entre todos os assuntos.</span>';
+      if (maxPct < 100) { /* keep easy as is */ }
+    }
+    document.getElementById("easytopics").innerHTML = easyHtml || '<span class="tag ok">—</span>';
+    document.getElementById("hardtopics").innerHTML = hardHtml || '<span class="tag bad">Nenhuma dificuldade identificada — parabéns!</span>';
+
+    var perfHtml = "";
+    topicPct.forEach(function(t){
+      perfHtml += "<tr><td>" + t.label + "</td><td>" + t.correct + "/" + t.total + "</td><td>" + t.pct + "%</td></tr>";
+    });
+    document.getElementById("perftable").innerHTML = perfHtml;
+
+    var weak = topicPct.filter(function(t){ return t.pct < 100; }).sort(function(a,b){ return a.pct - b.pct; });
+    var studyHtml = "";
+    if (weak.length === 0) {
+      studyHtml = "<li><b>Excelente desempenho!</b>Você acertou todas as questões dos 9 assuntos. Aproveite para revisar os temas periodicamente e manter o conteúdo fresco.</li>";
+    } else {
+      weak.forEach(function(t){
+        studyHtml += "<li><b>" + t.label + " (" + t.pct + "% de acertos)</b>" + studyTips[t.key] + "</li>";
+      });
+    }
+    document.getElementById("studyplan").innerHTML = studyHtml;
+
+    document.getElementById("results").classList.add("show");
+    document.getElementById("noresults").style.display = "none";
+    document.getElementById("results").scrollIntoView({behavior:"smooth", block:"start"});
+  });
+
+  function drawPie(correct, wrong){
+    var svg = document.getElementById("piechart");
+    var total = correct + wrong;
+    var r = 60, cx = 75, cy = 75;
+    var circumference = 2 * Math.PI * r;
+    var correctFrac = total ? correct / total : 0;
+    var correctLen = circumference * correctFrac;
+
+    svg.innerHTML =
+      '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="none" stroke="var(--red)" stroke-width="30"></circle>' +
+      '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="none" stroke="var(--pine)" stroke-width="30" ' +
+      'stroke-dasharray="' + correctLen + ' ' + circumference + '" stroke-dashoffset="' + (circumference*0.25) + '" transform="scale(1,-1)" transform-origin="' + cx + ' ' + cy + '"></circle>' +
+      '<text x="' + cx + '" y="' + (cy+6) + '" text-anchor="middle" font-family="Fraunces, serif" font-weight="700" font-size="20" fill="var(--ink)">' + Math.round(correctFrac*100) + '%</text>';
+  }
+
+  updateProgress();
+})();
+</script>
+</body>
+</html>
